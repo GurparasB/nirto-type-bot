@@ -3,7 +3,6 @@ from PIL import Image
 import pyautogui
 import time
 
-# Function to capture, read text, and type it out
 def capture_read_and_type(region=None, save_image=False):
     print("Waiting 5 seconds before capturing screenshot...")
     time.sleep(5) 
@@ -21,10 +20,10 @@ def capture_read_and_type(region=None, save_image=False):
     print("\nExtracted Text:")
     print(text if text.strip() else "No text detected.")
 
-    lines = text.strip().split("\n")  # Split into lines
+    lines = text.strip().split("\n")  
     for line in lines:
         pyautogui.typewrite(line)
-        pyautogui.press("space")   # Press space after each line
+        pyautogui.press("space")   
 
 # Format: (x, y, width, height)
 
